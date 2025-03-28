@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Product Details - SUPERB{% endblock title %}
+{% block body %}
+
+<!-- Product Detail Section -->
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+        <!-- Breadcrumb Navigation -->
+        <nav class="mb-8 text-sm text-gray-600">
+            <ol class="flex space-x-2">
+                <li><a href="/" class="hover:text-green-600">Home</a></li>
+                <li>/</li>
+                <li><a href="/products/" class="hover:text-green-600">Products</a></li>
+                <li>/</li>
+                <li class="text-green-600">Product Name</li>
+            </ol>
+        </nav>
+
+        <!-- Product Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Product Images -->
+            <div class="space-y-4">
+                <!-- Main Image -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" 
+                         alt="Product Image" 
+                         class="w-full h-96 object-cover cursor-zoom-in">
+                    <span class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-bold shadow-sm">
+                        🛒 Free Shipping
+                    </span>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="grid grid-cols-4 gap-3">
+                    <div class="border-2 border-green-600 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" 
+                             alt="Thumbnail 1" 
+                             class="w-full h-24 object-cover cursor-pointer">
+                    </div>
+                    <div class="border rounded-lg overflow-hidden hover:border-green-600 transition-colors">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" 
+                             alt="Thumbnail 2" 
+                             class="w-full h-24 object-cover cursor-pointer">
+                    </div>
+                    <!-- Add more thumbnails as needed -->
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="lg:pl-8">
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">Premium Wireless Headphones</h1>
+                <div class="flex items-center mb-4">
+                    <div class="flex text-yellow-400">
+                        ★★★★★
+                    </div>
+                    <span class="text-sm text-gray-600 ml-2">(128 reviews)</span>
+                </div>
+                
+                <p class="text-2xl font-bold text-green-600 mb-6">$299.99</p>
+                
+                <!-- Product Variants -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-3">Color Options</h3>
+                    <div class="flex space-x-3">
+                        <button class="w-8 h-8 rounded-full bg-black border-2 border-gray-300"></button>
+                        <button class="w-8 h-8 rounded-full bg-blue-600 border-2 border-gray-300"></button>
+                        <button class="w-8 h-8 rounded-full bg-red-600 border-2 border-gray-300"></button>
+                    </div>
+                </div>
+
+                <!-- Quantity Selector -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-3">Quantity</h3>
+                    <div class="flex items-center space-x-3">
+                        <button class="px-3 py-2 bg-gray-100 rounded-lg">-</button>
+                        <input type="number" value="1" 
+                               class="w-16 text-center border rounded-lg py-2">
+                        <button class="px-3 py-2 bg-gray-100 rounded-lg">+</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col space-y-4">
+                    <button class="w-full py-4 bg-green-600 text-white rounded-lg font-bold hover:bg-green-700 transition-colors">
+                        Add to Cart
+                    </button>
+                    <button class="w-full py-4 border-2 border-green-600 text-green-600 rounded-lg font-bold hover:bg-green-50 transition-colors">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product Details Accordion -->
+                <div class="mt-8 space-y-4">
+                    <div class="border-b pb-4">
+                        <h3 class="text-lg font-semibold mb-2">Product Details</h3>
+                        <p class="text-gray-600">
+                            Experience premium sound quality with our wireless headphones. 
+                            Featuring active noise cancellation, 30-hour battery life, 
+                            and premium comfort design.
+                        </p>
+                    </div>
+                    
+                    <div class="border-b pb-4">
+                        <h3 class="text-lg font-semibold mb-2">Specifications</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Bluetooth 5.0 connectivity</li>
+                            <li>IPX4 water resistance</li>
+                            <li>40mm dynamic drivers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Products -->
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-8">You Might Also Like</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Repeat product cards from previous section -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <!-- Product card content -->
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}
